@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей & Анастасия | Свадебное приглашение</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero секция с главным приглашением -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="flower-decoration">✧</div>
+            <p class="hero-subtitle">Мы приглашаем вас на нашу свадьбу</p>
+           <div class="hero-decoration">
+            <span class="decoration-line"></span>
+            <span class="decoration-star">✦</span>
+            <span class="decoration-line"></span>
+        </div>
+        
+        <h1 class="hero-title">
+            Алексей <span class="ampersand">&</span> Анастасия
+        </h1>
+        
+        <div class="hero-decoration">
+            <span class="decoration-line"></span>
+            <span class="decoration-star">✦</span>
+            <span class="decoration-line"></span>
+        </div>
+        
+        <div class="hero-date">
+            <span class="date-number">24</span>
+            <span class="date-details">
+                <span class="date-month">октября</span>
+                <span class="date-year">2026</span>
+            </span>
+        </div>
+        
+        <a href="#rsvp" class="btn-primary">Подтвердить присутствие →</a>
+    </div>
+</section>
+
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">A&А</a>
+            <button class="nav-toggle" aria-label="Меню">☰</button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#details" class="nav-link">Детали</a></li>
+                <li><a href="#rsvp" class="nav-link">Подтверждение</a></li>
+                <li><a href="#schedule" class="nav-link">Программа</a></li>
+                <li><a href="#map" class="nav-link">Схема расселения</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Секция: Детали мероприятия -->
+    <section class="details" id="details">
+        <div class="container">
+            <h2 class="section-title">Детали события</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h3>Дата</h3>
+                    <p>24 октября 2026 года</p>
+                    <p class="detail-time">Суббота, регистрация в 11:30 <br> начало банкета в 16:00</p>
+                </div>
+                 <div class="detail-card">
+                    <div class="detail-icon">💍</div>
+                    <h3>ЗАГС</h3>
+                    <p>ЗАГС Красносельского района</p>
+                    <p class="detail-time">Санкт-Петербург, ул. Доблести, 36</p>
+                    <a href="#" class="detail-map" id="openMap1">Открыть на карте →</a>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3>Место</h3>
+                    <p>Коттеджный комплекс «Южный Форт»</p>
+                    <p class="detail-time">Санкт-Петербург, территория Сергиево, ул.Свердлова дом 32/1</p>
+                    <a href="#" class="detail-map" id="openMap">Открыть на карте →</a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+<!-- Секция: Программа празднования -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Программа празднования</h2>
+            <div class="schedule-grid">
+                
+                <!-- Пятница -->
+                <div class="schedule-day">
+                    <div class="schedule-day-title">
+                        <span class="schedule-day-name">Пятница</span>
+                        <span class="schedule-day-date">23 октября</span>
+                    </div>
+                    <div class="schedule-events">
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">с 16:00</span>
+                            <span class="schedule-desc">Заселение в гостевые домики</span>
+                        </div>
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">19:00</span>
+                            <span class="schedule-desc">Баня 🧖‍♀️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Суббота -->
+                <div class="schedule-day highlight">
+                    <div class="schedule-day-title">
+                        <span class="schedule-day-name">Суббота</span>
+                        <span class="schedule-day-date">24 октября</span>
+                    </div>
+                    <div class="schedule-events">
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">11:30</span>
+                            <span class="schedule-desc">Церемония в ЗАГС</span>
+                        </div>
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">12:30</span>
+                            <span class="schedule-desc">Экскурсия</span>
+                        </div>
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">16:30</span>
+                            <span class="schedule-desc">Банкет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Воскресенье -->
+                <div class="schedule-day">
+                    <div class="schedule-day-title">
+                        <span class="schedule-day-name">Воскресенье</span>
+                        <span class="schedule-day-date">25 октября</span>
+                    </div>
+                    <div class="schedule-events">
+                        <div class="schedule-event-item">
+                            <span class="schedule-time">до 12:00</span>
+                            <span class="schedule-desc">Выезд из домиков</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Секция: Форма RSVP с Google Forms -->
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <h2 class="section-title light">Подтвердите присутствие</h2>
+            <p class="rsvp-subtitle">Пожалуйста, ответьте до <strong>15 августа 2026</strong></p>
+            
+            <!-- ⚠️ ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА ВАШУ ИЗ GOOGLE FORMS -->
+            <div class="google-form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPpj_Lv0s8px8XdtfJH-zA0kO4nftuOx59dV-xvSRzEz4OA/viewform?embedded=true" class="google-form-iframe" width="130%" height="200" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Секция: Схема расселения -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <h2 class="section-title">Схема расселения</h2>
+            <div class="map-grid">
+                <div class="map-card">
+                    <div class="map-image-placeholder">
+                        <img src="img/котедж1.jpg" alt="Коттедж №1">
+                    </div>
+                    <p class="map-caption">Коттедж №1</p>
+                </div>
+                <div class="map-card">
+                    <div class="map-image-placeholder">
+                        <img src="img/котедж2.jpg" alt="Коттедж №2">
+                    </div>
+                    <p class="map-caption">Коттедж №2</p>
+                </div>
+            </div>
+            <p class="map-note">* Списки появятся позже. Следите за обновлениями!</p>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>С нетерпением ждём встречи с вами!</p>
+            <p class="footer-note">Алексей & Анастасия</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
