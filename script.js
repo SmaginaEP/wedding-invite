@@ -29,7 +29,7 @@ if (mapButton) {
     mapButton.addEventListener('click', function(e) {
         e.preventDefault();
         const address = encodeURIComponent('Санкт-Петербург, территория Сергиево, ул.Свердлова дом 32/1');
-        window.open(`https://maps.google.com/?q=${address}`, '_blank');
+        window.open(`https://yandex.ru/maps/?text=${address}`, '_blank');
     });
 }
 const mapButton1 = document.getElementById('openMap1');
@@ -37,7 +37,7 @@ if (mapButton1) {
     mapButton1.addEventListener('click', function(e) {
         e.preventDefault();
         const address = encodeURIComponent('Санкт-Петербург, ул. Доблести, 36');
-        window.open(`https://maps.google.com/?q=${address}`, '_blank');
+        window.open(`https://yandex.ru/maps/?text=${address}`, '_blank');
     });
 }
 
