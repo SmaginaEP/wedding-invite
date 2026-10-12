@@ -42,16 +42,43 @@ if (mapButton1) {
 }
 
 // Эффект при скролле для навигации
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-        } else {
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-        }
+// Auto-hide navbar при скролле
+let lastScrollY = window.scrollY;
+let ticking = false;
+const navbar = document.querySelector('.navbar');
+const SCROLL_THRESHOLD = 10; // минимальная дистанция для срабатывания
+
+function updateNavbar() {
+  const currentScrollY = window.scrollY;
+
+  if (navbar) {
+    // Не скрываем шапку, если открыто мобильное меню
+    const menuOpen = navMenu && navMenu.classList.contains('active');
+
+    if (menuOpen) {
+      navbar.classList.remove('hidden');
+    } else if (currentScrollY < 80) {
+      // В самом верху страницы — шапка всегда видна
+      navbar.classList.remove('hidden');
+    } else if (currentScrollY > lastScrollY + SCROLL_THRESHOLD) {
+      // Скроллим вниз — прячем
+      navbar.classList.add('hidden');
+    } else if (currentScrollY < lastScrollY - SCROLL_THRESHOLD) {
+      // Скроллим вверх — показываем
+      navbar.classList.remove('hidden');
     }
-});
+  }
+
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateNavbar);
+    ticking = true;
+  }
+}, { passive: true });
 
 // Анимация появления элементов
 const observerOptions = {
