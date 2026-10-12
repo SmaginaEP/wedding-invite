@@ -77,3 +77,60 @@ console.log('🎉 Свадебный сайт готов!');
 console.log('📌 Чтобы заменить картинки схем:');
 console.log('1. Загрузите ваши изображения в папку images/');
 console.log('2. Замените плейсхолдеры на <img src="images/ваша_картинка.jpg">');
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+        // Функция для синхронизации подсветки
+        function highlightRoom(roomName, isActive) {
+            // Находим все оверлеи с таким названием комнаты
+            const overlays = document.querySelectorAll(`.room-overlay[data-room="${roomName}"]`);
+            overlays.forEach(overlay => {
+                if (isActive) {
+                    overlay.classList.add('active');
+                } else {
+                    overlay.classList.remove('active');
+                }
+            });
+
+            // Находим все строки в списках с таким названием комнаты
+            const listItems = document.querySelectorAll(`.residents-list li[data-room-target="${roomName}"]`);
+            listItems.forEach(item => {
+                if (isActive) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // 1. Наведение на оверлей (картинку)
+        const overlays = document.querySelectorAll('.room-overlay');
+        overlays.forEach(overlay => {
+            overlay.addEventListener('mouseenter', function() {
+                const roomName = this.getAttribute('data-room');
+                highlightRoom(roomName, true);
+            });
+            overlay.addEventListener('mouseleave', function() {
+                const roomName = this.getAttribute('data-room');
+                highlightRoom(roomName, false);
+            });
+        });
+
+        // 2. Наведение на строку в списке
+        const listItems = document.querySelectorAll('.residents-list li');
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const roomName = this.getAttribute('data-room-target');
+                if (roomName) {
+                    highlightRoom(roomName, true);
+                }
+            });
+            item.addEventListener('mouseleave', function() {
+                const roomName = this.getAttribute('data-room-target');
+                if (roomName) {
+                    highlightRoom(roomName, false);
+                }
+            });
+        });
+    });

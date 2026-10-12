@@ -38,7 +38,7 @@
             </span>
         </div>
         
-        <a href="#rsvp" class="btn-primary">Подтвердить присутствие →</a>
+        <!-- <a href="#rsvp" class="btn-primary">Подтвердить присутствие →</a> -->
     </div>
 </section>
 
@@ -66,7 +66,7 @@
                     <div class="detail-icon">📅</div>
                     <h3>Дата</h3>
                     <p>24 октября 2026 года</p>
-                    <p class="detail-time">Суббота, регистрация в 11:30 <br> начало банкета в 16:00</p>
+                    <p class="detail-time">Суббота, регистрация в 11:40 <br> встреча молодых и начало банкета в 16:00</p>
                 </div>
                  <div class="detail-card">
                     <div class="detail-icon">💍</div>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="schedule-event-item">
                             <span class="schedule-time">19:00</span>
-                            <span class="schedule-desc">Баня 🧖‍♀️</span>
+                            <span class="schedule-desc">Баня</span>
                         </div>
                     </div>
                 </div>
@@ -116,14 +116,23 @@
                         <span class="schedule-day-name">Суббота</span>
                         <span class="schedule-day-date">24 октября</span>
                     </div>
+                    
                     <div class="schedule-events">
                         <div class="schedule-event-item">
-                            <span class="schedule-time">11:30</span>
+                            <span class="schedule-time">09:00</span>
+                            <span class="schedule-desc">Выезд на выкуп невесты</span>
+                        </div>
+                        <div  class="schedule-event-item">
+                            <span class="schedule-time">11:40</span>
                             <span class="schedule-desc">Церемония в ЗАГС</span>
                         </div>
                         <div class="schedule-event-item">
                             <span class="schedule-time">12:30</span>
                             <span class="schedule-desc">Экскурсия</span>
+                        </div>
+                         <div class="schedule-event-item">
+                            <span class="schedule-time">16:00</span>
+                            <span class="schedule-desc">Встреча молодых</span>
                         </div>
                         <div class="schedule-event-item">
                             <span class="schedule-time">16:30</span>
@@ -148,41 +157,132 @@
             </div>
         </div>
     </section>
-    <!-- Секция: Форма RSVP с Google Forms -->
+    <!-- Секция: Форма RSVP с Google Forms 
     <section class="rsvp" id="rsvp">
         <div class="container">
             <h2 class="section-title light">Подтвердите присутствие</h2>
             <p class="rsvp-subtitle">Пожалуйста, ответьте до <strong>15 августа 2026</strong></p>
             
-            <!-- ⚠️ ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА ВАШУ ИЗ GOOGLE FORMS -->
-            <div class="google-form-wrapper">
+            ⚠️ ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА ВАШУ ИЗ GOOGLE FORMS -->
+            <!--<div class="google-form-wrapper">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerPpj_Lv0s8px8XdtfJH-zA0kO4nftuOx59dV-xvSRzEz4OA/viewform?embedded=true" class="google-form-iframe" width="130%" height="200" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
             </div>
         </div>
-    </section>
+    </section> -->
 
     
 
     <!-- Секция: Схема расселения -->
     <section class="map-section" id="map">
         <div class="container">
-            <h2 class="section-title">Схема расселения</h2>
-            <div class="map-grid">
-                <div class="map-card">
-                    <div class="map-image-placeholder">
-                        <img src="img/котедж1.jpg" alt="Коттедж №1">
-                    </div>
-                    <p class="map-caption">Коттедж №1</p>
-                </div>
-                <div class="map-card">
-                    <div class="map-image-placeholder">
-                        <img src="img/котедж2.jpg" alt="Коттедж №2">
-                    </div>
-                    <p class="map-caption">Коттедж №2</p>
-                </div>
-            </div>
-            <p class="map-note">* Списки появятся позже. Следите за обновлениями!</p>
+           
+    <h2 class="section-title">Схема расселения</h2>
+<div class="map-grid">
+    <div class="map-card">
+        <div class="map-image-wrapper">
+            <img src="img/котедж1.jpg" alt="Коттедж №1" class="map-img">
+            
+            <!-- ОВЕРЛЕИ ДЛЯ КОТТЕДЖА 1 (подгоните координаты top/left/width/height под картинку) -->
+            <div class="room-overlay" 
+                 data-room="Спальня 6" 
+                 data-names="Кусяков Михаил, Кусякова Евгения" 
+                 style="top: 55%; left: 10%; width: 15%; height: 30%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 7" 
+                 data-names="Кондратьев Александр, Осипова Дарья, Киселев Олег, Ефимова Ольга" 
+                 style="top: 50%; left: 50%; width: 16%; height: 35%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 8" 
+                 data-names="Туманова Юлия, Левендорская Анастасия" 
+                 style="top: 55%; left: 65%; width: 10%; height: 30%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 9" 
+                 data-names="Селюков Александр, Никитин Павел" 
+                 style="top: 50%; left: 75%; width: 15%; height: 35%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 10" 
+                 data-names="Страмцов Дмитрий, Минаева Юлия, Матасов Семен, Мандрусова София" 
+                 style="top: 25%; left: 65%; width: 25%; height: 25%;"></div>
         </div>
+        <p class="map-caption">Коттедж №1</p>
+    </div>
+    <div class="map-card">
+        <div class="map-image-wrapper">
+            <img src="img/котедж2.jpg" alt="Коттедж №2" class="map-img">
+            
+            <!-- ОВЕРЛЕИ ДЛЯ КОТТЕДЖА 2 (подгоните координаты top/left/width/height под картинку) -->
+            <div class="room-overlay" 
+                 data-room="Спальня 2" 
+                 data-names="Якушев Павел, Якушева Евгения" 
+                 style="top: 62%; left: 12%; width: 20%; height: 20%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 3" 
+                 data-names="Никитин Андрей, Никитина Наталья" 
+                 style="top: 45%; left: 12%; width: 15%; height: 20%;"></div>
+            <div class="room-overlay" 
+                 data-room="Спальня 4" 
+                 data-names="Думов Юрий, Думова Галина" 
+                 style="top: 20%; left: 12%; width: 15%; height: 25%;"></div>
+                 <div class="room-overlay" 
+                 data-room="Спальня 5" 
+                 data-names="Смагин Василий, Смагина Елена" 
+                 style="top: 20%; left: 32%; width: 15%; height: 20%;"></div>
+            <div class="room-overlay" 
+                 data-room="Номер для молодоженов" 
+                 data-names="Якушев Алексей, Якушева Анастасия" 
+                 style="top: 20%; left: 50%; width: 15%; height: 40%;"></div>
+        </div>
+        <p class="map-caption">Коттедж №2</p>
+    </div>
+</div>
+<p class="map-note">Чтобы каждый чувствовал себя максимально удобно и ничего не пришлось искать на месте, мы заранее подготовили для вас схему расселения. <br> Пожалуйста, ознакомьтесь с планом ниже.</p>
+
+<div class="map-grid">
+    <!-- КОТТЕДЖ 1 -->
+    <div class="map-card">
+        <!-- Список для Коттеджа 1 -->
+        <div class="residents-list">
+            <h4>1 этаж</h4>
+            <ul>
+                <li data-room-target="Спальня 6"><strong>Спальня 5:</strong> Кусяков Михаил, Кусякова Евгения</li>
+            </ul>
+            
+            <h4>2 этаж</h4>
+            <ul>
+                <li data-room-target="Спальня 7"><strong>Спальня 7:</strong> Кондратьев Александр, Осипова Дарья, <br> Киселев Олег, Ефимова Ольга</li>
+                <li data-room-target="Спальня 8"><strong>Спальня 8:</strong> Туманова Юлия, Левендорская Анастасия</li>
+                <li data-room-target="Спальня 9"><strong>Спальня 9:</strong> Селюков Александр, Никитин Павел</li>
+                <li data-room-target="Спальня 10"><strong>Спальня 10:</strong> Страмцов Дмитрий, Минаева Юлия, <br> Матасов Семен, Мандрусова София</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- КОТТЕДЖ 2 -->
+    <div class="map-card">
+        <!-- Список для Коттеджа 2 -->
+        <div class="residents-list">
+            <h4>1 этаж</h4>
+            <ul>
+                <li data-room-target="Спальня 2"><strong>Спальня 2:</strong> Якушев Павел Павлович, Якушева Евгения Сергеевна</li>
+                <li data-room-target="Спальня 3"><strong>Спальня 3:</strong> Никитин Андрей Алексеевич, Никитина Наталья Леонидовна</li>
+                <li data-room-target="Спальня 4"><strong>Спальня 4:</strong> Думов Юрий, Думова Галина</li>
+                <li data-room-target="Спальня 5"><strong>Спальня 5:</strong> Смагин Василий, Смагина Елена</li>
+            </ul>
+            
+            <h4>2 этаж</h4>
+            <ul>
+                <li data-room-target="Номер для молодоженов"><strong>Номер для молодоженов:</strong> Якушев Алексей, Якушева Анастасия</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<p class="map-note">Если не нашли себя в списке - любое свободное место ваше!</p>
+    
+    
+    
+    
+    
+    </div>
     </section>
 
     <!-- Подвал -->

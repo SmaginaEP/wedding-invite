@@ -391,7 +391,7 @@ section {
 .map-card {
     flex: 1;
     min-width: 280px;
-     max-width: 1200px;
+     max-width: 1300px;
     text-align: center;
 }
 
@@ -417,7 +417,7 @@ section {
 }
 
 .map-image-placeholder img:hover {
-    transform: scale(1.02);  /* лёгкое увеличение при наведении */
+    transform: scale(1.15);  /* лёгкое увеличение при наведении */
 }
 
 
@@ -429,9 +429,207 @@ section {
 .map-note {
     text-align: center;
     margin-top: 2rem;
-    color: #666;
-    font-size: 0.85rem;
+    color: #2d2d2d;
+    font-size: 1 rem;
 }
+.residents-list {
+        text-align: left;
+        background-color: #f9f6f0; /* Светлый фон в тон вашего сайта */
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+        border: 1px solid #e0dcd3;
+        font-family: inherit;
+        color: #333;
+    }
+    
+    .residents-list h4 {
+        margin: 15px 0 8px 0;
+        font-size: 16px;
+        color: #8b7355; /* Коричневатый оттенок для заголовков */
+        border-bottom: 1px solid #e0dcd3;
+        padding-bottom: 4px;
+    }
+    
+    .residents-list h4:first-child {
+        margin-top: 0;
+    }
+    
+    .residents-list ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .residents-list li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+        position: relative;
+        padding-left: 15px;
+    }
+    
+    .residents-list li::before {
+        content: "•";
+        color: #8b7355;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    
+    .residents-list strong {
+        color: #333;
+    }
+
+/* --- Стили для картинок и оверлеев --- */
+    .map-image-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .map-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .room-overlay {
+        position: absolute;
+        background-color: transparent;
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 4px;
+        z-index: 5;
+    }
+
+    /* Эффект при наведении на комнату */
+    .room-overlay:hover, .room-overlay.active {
+        background-color: rgba(255, 200, 0, 0.4); /* Желтая полупрозрачная заливка */
+        border-color: #ff9900;
+        box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+    }
+
+    /* Подсказка с названием комнаты (заголовок) */
+    .room-overlay::before {
+        content: attr(data-room);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #8b7355;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 4px 4px 0 0;
+        font-size: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+        z-index: 10;
+    }
+
+    /* Подсказка с именами (основной блок) */
+    .room-overlay::after {
+        content: attr(data-names);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        color: #333;
+        padding: 6px 10px;
+        border-radius: 0 0 4px 4px;
+        border: 1px solid #8b7355;
+        border-top: none;
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: normal;
+        width: max-content;
+        max-width: 200px;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .room-overlay:hover::before,
+    .room-overlay:hover::after,
+    .room-overlay.active::before,
+    .room-overlay.active::after {
+        opacity: 1;
+    }
+
+    /* --- Стили для списков --- */
+    .residents-list {
+        text-align: left;
+        background-color: #f9f6f0;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+        border: 1px solid #e0dcd3;
+        font-family: inherit;
+        color: #333;
+    }
+    
+    .residents-list h4 {
+        margin: 15px 0 8px 0;
+        font-size: 16px;
+        color: #8b7355;
+        border-bottom: 1px solid #e0dcd3;
+        padding-bottom: 4px;
+    }
+    
+    .residents-list h4:first-child {
+        margin-top: 0;
+    }
+    
+    .residents-list ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .residents-list li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+        position: relative;
+        padding-left: 15px;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+    
+    .residents-list li::before {
+        content: "•";
+        color: #8b7355;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    
+    /* Эффект при наведении на строку в списке */
+    .residents-list li:hover, .residents-list li.active {
+        color: #ff9900;
+    }
+    
+    .residents-list li:hover strong, .residents-list li.active strong {
+        color: #ff9900;
+    }
+
+    .residents-list strong {
+        color: #333;
+        transition: color 0.2s ease;
+    }
+
+
 
 /* Футер */
 .footer {
