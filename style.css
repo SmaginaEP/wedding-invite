@@ -18,11 +18,10 @@ h1, h2, h3 {
 }
 
 /* Hero секция */
-.hero {
+/* .hero {
     height: 95vh;
     min-height: 600px;
     background-image: url('img/5.jpg');
-/* url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600') */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -31,7 +30,24 @@ h1, h2, h3 {
     justify-content: center;
     text-align: center;
     padding-top: 3vh;
+} */
+
+.hero {
+  height: 100vh;
+  height: 100dvh;               /* dynamic viewport — корректно на мобильных */
+  min-height: 500px;
+  background-image: url('img/5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* на мобильных fixed тормозит */
+  position: relative;
+  display: flex;
+  align-items: center;          /* центрируем по вертикали */
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -645,9 +661,9 @@ section {
 }
 
 /* Адаптив */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .hero {
-        padding-top: 15vh;  /* на телефонах отступ больше */
+        padding-top: 15vh;  
     }
     
     .hero-content {
@@ -697,6 +713,93 @@ section {
     .schedule-desc {
         text-align: center;
     }
+} */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 1.5rem 1rem;
+    background-position: center top; /* чтобы верх картинки не обрезался */
+  }
+
+  .hero-content {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .flower-decoration {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+    margin: 0.5rem 0;
+  }
+
+  .ampersand {
+    margin: 0 0.25rem;
+  }
+
+  .hero-date {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .date-number {
+    font-size: 2.5rem;
+  }
+
+  .date-details {
+    text-align: center;
+    align-items: center;
+  }
+
+  .date-month {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .date-year {
+    font-size: 0.9rem;
+  }
+
+  .hero-decoration {
+    margin: 0.75rem 0;
+  }
+
+  .decoration-line {
+    width: 30px;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .date-number {
+    font-size: 2rem;
+  }
 }
 
 /* Анимации */
