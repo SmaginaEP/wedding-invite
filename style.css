@@ -802,6 +802,9 @@ section {
   }
 
   /* Меню теперь всегда прижато к верху экрана и спрятано ПОД навбар */
+  .navbar {
+    display: none; /* прячем шапку на мобильных */
+  }
   .nav-menu {
     display: none;
     flex-direction: column;
