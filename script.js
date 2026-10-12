@@ -129,3 +129,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    // Закрытие меню при клике вне его
+document.addEventListener('click', (e) => {
+  if (navMenu && navMenu.classList.contains('active')) {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  }
+});
+
+// Закрытие меню при изменении ориентации / ресайзе
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && navMenu) {
+    navMenu.classList.remove('active');
+  }
+});
