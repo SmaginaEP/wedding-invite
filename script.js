@@ -72,11 +72,6 @@ document.querySelectorAll('.detail-card, .schedule-day, .map-card').forEach(el =
     observer.observe(el);
 });
 
-// Инструкция в консоли
-console.log('🎉 Свадебный сайт готов!');
-console.log('📌 Чтобы заменить картинки схем:');
-console.log('1. Загрузите ваши изображения в папку images/');
-console.log('2. Замените плейсхолдеры на <img src="images/ваша_картинка.jpg">');
 
 
 
